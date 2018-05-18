@@ -333,8 +333,6 @@
                 <version>3.9.0</version>
                  <configuration>
                      <format>html</format>
-                     <outputDirectory>code-analysis/html</outputDirectory>
-                     <targetDirectory>code-analysis/</targetDirectory>
                             <rulesets>
                                 <ruleset>IdentifyIO.xml</ruleset>  
                      </rulesets>
