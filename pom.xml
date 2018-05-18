@@ -482,7 +482,6 @@
                             <targetDirectory>code-analysis/reports/</targetDirectory>
                             <aggregate>true</aggregate>
                             <rulesets>
-                             <ruleset>IdentifyLogs.xml</ruleset>
                              <ruleset>IdentifyIO.xml</ruleset>  
                             </rulesets>
                </configuration>
@@ -514,7 +513,6 @@
                             <targetDirectory>code-analysis/reports/</targetDirectory>
                             <aggregate>true</aggregate>
                             <rulesets>
-                             <ruleset>IdentifyLogs.xml</ruleset>
                              <ruleset>IdentifyIO.xml</ruleset>
                             </rulesets>
                </configuration>
