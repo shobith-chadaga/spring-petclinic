@@ -523,8 +523,7 @@
                             <targetDirectory>code-analysis/reports/</targetDirectory>
                             <targetJdk>1.7</targetJdk>
                             <rulesets>
-                             <ruleset>IdentifyIO.xml</ruleset>
-                                <ruleset>
+                             <ruleset>IdentifyIO.xml</ruleset>                              
                             </rulesets>
                </configuration>
             </plugin>
