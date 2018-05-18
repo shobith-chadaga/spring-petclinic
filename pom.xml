@@ -483,7 +483,7 @@
                             <aggregate>true</aggregate>
                             <rulesets>
                              <ruleset>IdentifyLogs.xml</ruleset>
-                             <ruleset>IdentifyFileIO.xml</ruleset>  
+                             <ruleset>IdentifyIO.xml</ruleset>  
                             </rulesets>
                </configuration>
         </plugins>
@@ -514,7 +514,7 @@
                             <aggregate>true</aggregate>
                             <rulesets>
                              <ruleset>IdentifyLogs.xml</ruleset>
-                             <ruleset>IdentifyFileIO.xml</ruleset>
+                             <ruleset>IdentifyIO.xml</ruleset>
                             </rulesets>
                </configuration>
             
