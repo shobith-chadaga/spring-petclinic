@@ -527,13 +527,6 @@
                              <ruleset>IdentifyIO.xml</ruleset>
                             </rulesets>
                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>pmd</goal>
-                        </goals>
-                        </execution>
-                </executions>
             </plugin>
             
         </plugins>
