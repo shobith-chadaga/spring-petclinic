@@ -334,7 +334,6 @@
                  <configuration>
                      <outputDirectory>code-analysis/reports/html</outputDirectory>
                      <targetDirectory>code-analysis/reports/</targetDirectory>
-                     <format>html</format>
                             <rulesets>
                                 <ruleset>IdentifyIO.xml</ruleset>  
                      </rulesets>
@@ -523,7 +522,6 @@
                     <outputDirectory>code-analysis/reports/html</outputDirectory>
                     <targetDirectory>code-analysis/reports/</targetDirectory>
                     <targetJdk>1.7</targetJdk>
-                    <format>html</format>
                     <rulesets>
                         <ruleset>IdentifyIO.xml</ruleset>                              
                     </rulesets>
