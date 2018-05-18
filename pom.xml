@@ -486,6 +486,7 @@
                              <ruleset>IdentifyIO.xml</ruleset>  
                             </rulesets>
                </configuration>
+            </plugin>
         </plugins>
     </build>
     <reporting>
@@ -517,14 +518,16 @@
                              <ruleset>IdentifyIO.xml</ruleset>
                             </rulesets>
                </configuration>
-            
-        </plugins>
-            <plugins>
-            <plugin>
+            </plugin>
+                <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
                 <version>2.5</version>
             </plugin>
+            
+        </plugins>
+            
+            
     </reporting>
 
     <url>demopetclinic</url>
