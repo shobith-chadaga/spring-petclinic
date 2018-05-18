@@ -472,6 +472,19 @@
                 </executions>
             </plugin -->
             <!-- addtion ends here 22 May 2016 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.9.0</version>
+                <configuration>
+                         <goals>pmd</goals>
+                            <outputDirectory>code-analysis/reports/html</outputDirectory>
+                            <targetDirectory>code-analysis/reports/</targetDirectory>
+                            <aggregate>true</aggregate>
+                            <rulesets>
+                             <ruleset>ruleset1.xml</ruleset>
+                            </rulesets>
+               </configuration>
         </plugins>
     </build>
     <reporting>
@@ -489,6 +502,20 @@
                     <check/>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.9.0</version>
+                <configuration>
+                         <goals>pmd</goals>
+                            <outputDirectory>code-analysis/reports/html</outputDirectory>
+                            <targetDirectory>code-analysis/reports/</targetDirectory>
+                            <aggregate>true</aggregate>
+                            <rulesets>
+                             <ruleset>ruleset1.xml</ruleset>
+                            </rulesets>
+               </configuration>
+            
         </plugins>
     </reporting>
 
