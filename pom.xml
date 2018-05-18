@@ -511,7 +511,7 @@
                          <goals>pmd</goals>
                             <outputDirectory>code-analysis/reports/html</outputDirectory>
                             <targetDirectory>code-analysis/reports/</targetDirectory>
-                            <aggregate>true</aggregate>
+                            <targetJdk>1.7</targetJdk>
                             <rulesets>
                              <ruleset>IdentifyIO.xml</ruleset>
                             </rulesets>
