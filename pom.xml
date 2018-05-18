@@ -341,7 +341,6 @@
                  </configuration>
                  <executions>
                     <execution>
-                        <id>executepmd</id>
                         <goals>
                             <goal>pmd</goal>
                         </goals>
