@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         name="IdentifyLogs2"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+   <description>Identify Logs being generated in Java Code</description>
+   <rule class="net.sourceforge.pmd.lang.rule.XPathRule" deprecated="false" dfa="false"
+         language="java"
+         message="Java Util Logger Import"
+         name="Inline_JAVA_UTIL_LOGGER_IMPORT"
+         typeResolution="true">
+      <description>LOG STATEMENTS IDENTIFIER</description>
+      <priority>3</priority>
+      <properties>
+         <property name="version" value="2.0"/>
+         <property name="xpath">
+            <value>//ImportDeclaration/Name
+					 	[
+					 		contains(@Image, 'java.util.logging')
+					 	]
+				</value>
+         </property>
+      </properties>
+   </rule>
+   
+   <rule class="net.sourceforge.pmd.lang.rule.XPathRule" deprecated="false" dfa="false"
+         language="java"
+         message="Inline Log Usage"
+         name="Inline_Log"
+         typeResolution="true">
+      <description>LOG STATEMENTS IDENTIFIER</description>
+      <priority>3</priority>
+      <properties>
+         <property name="version" value="2.0"/>
+         <property name="xpath">
+            <value>//Name
+					[
+						  starts-with(@Image,'LogManager.logStatus')
+					   or starts-with(@Image,'Logger.getLogger')
+					   or starts-with(@Image,'FILogger.getLogger')
+					   or starts-with(@Image,'_logger.error')
+					   or starts-with(@Image,'_logger.info')
+					   or starts-with(@Image,'_logger.log')
+					   or starts-with(@Image,'logger.')
+					   or contains(@Image,'.log')
+					   or contains(@Image,'.debug')
+					   or contains(@Image,'.info')
+					   or contains(@Image,'.warn')
+					   or contains(@Image,'.error')
+					   or contains(@Image,'.fatal')
+					]
+				</value>
+         </property>
+      </properties>
+   </rule>
+  <rule class="net.sourceforge.pmd.lang.rule.XPathRule" deprecated="false" dfa="false"
+         language="java"
+         message="Inline System out presence"
+         name="Inline_SOP"
+         typeResolution="true">
+      <description>
+				LOG STATEMENTS IDENTIFIER
+      </description>
+      <priority>3</priority>
+      <properties>
+		  <property name="version" value="2.0"/>
+          <property name="xpath">
+              <value>//Name
+					[
+					   contains(@Image, 'System.out')
+					]
+			 
+              </value>
+          </property>
+      </properties>
+    </rule>
+    
+<rule class="net.sourceforge.pmd.lang.rule.XPathRule" deprecated="false" dfa="false"
+         language="java"
+         message="Inline System out Error presence"
+         name="Inline_SOP_ERROR"
+         typeResolution="true">
+      <description>
+				System Error
+      </description>
+      <priority>3</priority>
+      <properties>
+		  <property name="version" value="2.0"/>
+          <property name="xpath">
+              <value>//Name
+						[
+							contains(@Image,'System.err')
+						]
+              </value>
+          </property>
+      </properties>
+    </rule>
+    <rule class="net.sourceforge.pmd.lang.rule.XPathRule" deprecated="false" dfa="false"
+         language="java"
+         message="Inline GWT Log Manager"
+         name="Inline_GWT_LOG"
+         typeResolution="true">
+      <description>
+				LOG STATEMENTS IDENTIFIER
+      </description>
+      <priority>3</priority>
+      <properties>
+		  <property name="version" value="2.0"/>
+          <property name="xpath">
+              <value>//PrimaryExpression/PrimaryPrefix/Name
+					[
+   						starts-with(@Image, 'GWT.log')
+					]
+              </value>
+          </property>
+      </properties>
+    </rule>
+    
+    <rule class="net.sourceforge.pmd.lang.rule.XPathRule" deprecated="false" dfa="false"
+         language="java"
+         message="Apache Log Import"
+         name="Inline_APACHE_COMMONS_LOG_IMPORT"
+         typeResolution="true">
+      <description>
+				LOG STATEMENTS IDENTIFIER
+      </description>
+      <priority>3</priority>
+      <properties>
+		  <property name="version" value="2.0"/>
+          <property name="xpath">
+              <value>//ImportDeclaration/Name
+					 	[
+					 		contains(@Image, 'org.apache.commons.logging')
+					 	]
+              </value>
+          </property>
+      </properties>
+    </rule>
+    
+    <rule class="net.sourceforge.pmd.lang.rule.XPathRule" deprecated="false" dfa="false"
+         language="java"
+         message="Inline Apache Log4j Import"
+         name="Inline_APACHE_LOG4J_IMPORT"
+         typeResolution="true">
+      <description>
+				LOG STATEMENTS IDENTIFIER
+      </description>
+      <priority>3</priority>
+      <properties>
+		  <property name="version" value="2.0"/>
+          <property name="xpath">
+              <value>//ImportDeclaration/Name
+					 	[
+					 		contains(@Image, 'org.apache.log4j')
+					 	]
+              </value>
+          </property>
+      </properties>
+    </rule>     
+	<rule class="net.sourceforge.pmd.lang.rule.XPathRule" deprecated="false" dfa="false"
+         language="java"
+         message="Checking the printStackTrace method"
+         name="Catch_StackTrace"
+         typeResolution="true">
+	  <description>Checking the printStackTrace method in the catch statement</description>
+	  <priority>3</priority>
+	  <properties>
+		  <property name="version" value="2.0"/>
+	    <property name="xpath">
+	    <value>//CatchStatement/Block/BlockStatement/Statement/StatementExpression/PrimaryExpression/PrimaryPrefix/Name
+		   [
+		
+		
+		       contains(@Image,'printStackTrace')
+		
+		   ]
+	    </value>
+	    </property>
+	  </properties>
+	  
+	  <example>
+		<![CDATA[
+			package a;
+			class A{
+			   public void test(){
+			    try{
+			    }
+			   catch(Exception e){
+			       e.printStackTrace();
+			    }
+			  }
+			}
+		]]>
+	  </example>
+	</rule>
+</ruleset>
