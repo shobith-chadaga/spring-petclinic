@@ -518,13 +518,8 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.9.0</version>                
-                    <executions>
-                    <execution>
-                        <goals>
-                            <goal>pmd</goal>
-                        </goals>
-                        <configuration>                                    
+                <version>3.9.0</version>
+                <configuration>                                    
                             <outputDirectory>code-analysis/reports/html</outputDirectory>
                             <targetDirectory>code-analysis/reports/</targetDirectory>
                             <targetJdk>1.7</targetJdk>
@@ -532,6 +527,11 @@
                              <ruleset>IdentifyIO.xml</ruleset>
                             </rulesets>
                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>pmd</goal>
+                        </goals>
                         </execution>
                 </executions>
             </plugin>
