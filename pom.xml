@@ -327,6 +327,20 @@
                     <showWarnings>true</showWarnings>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <configuration>
+                    <failOnViolation>false</failOnViolation>
+                </configuration>
+                <executions>
+                <execution>
+                <goals>
+                <goal>check</goal>
+              </goals>
+            </execution>
+                </executions>
+            </plugin>
              <!--plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
