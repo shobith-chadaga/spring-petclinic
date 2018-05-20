@@ -327,23 +327,6 @@
                     <showWarnings>true</showWarnings>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <configuration>
-                    <failOnViolation>false</failOnViolation>
-                    <rulesets>
-                        <ruleset>IdentifyIO.xml</ruleset>  
-                     </rulesets>
-                </configuration>
-                <executions>
-                <execution>
-                <goals>
-                <goal>pmd</goal>
-              </goals>
-            </execution>
-                </executions>
-            </plugin>
              <!--plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
@@ -463,6 +446,16 @@
                     <checkModificationExclude>pom.xml</checkModificationExclude>
                 </checkModificationExcludes>
             </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <configuration>
+                    <failOnViolation>false</failOnViolation>
+                    <rulesets>
+                        <ruleset>IdentifyIO.xml</ruleset>  
+                     </rulesets>
+                </configuration>
             </plugin>
             <!-- addition ended by Sree -->
             <!-- plugin>
