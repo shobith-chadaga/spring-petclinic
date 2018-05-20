@@ -302,7 +302,7 @@
 
     <!-- Maven plugin versions are mentioned in order to guarantee the build reproducibility in the long term -->
     <build>
-        <defaultGoal>install</defaultGoal>
+        <!--defaultGoal>install</defaultGoal-->
         <testResources>
             <testResource>
                 <!-- declared explicitly so Spring config files can be placed next to their corresponding JUnit test class  -->
@@ -550,7 +550,7 @@
                 <!--configuration>                                    
                     <outputDirectory>code-analysis/reports/html</outputDirectory>
                     <targetDirectory>code-analysis/reports/</targetDirectory>
-                    <targetJdk>1.7</targetJdk>
+                    <targetJdk>1.6</targetJdk>
                </configuration-->
             </plugin>
             
