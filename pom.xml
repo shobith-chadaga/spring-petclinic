@@ -335,7 +335,8 @@
                      <outputDirectory>code-analysis/reports/html</outputDirectory>
                      <targetDirectory>code-analysis/reports/</targetDirectory>
                             <rulesets>
-                                <ruleset>IdentifyIO.xml</ruleset>  
+                                <ruleset>IdentifyIO.xml</ruleset>
+                                <ruleset>IdentifyLogs.xml</ruleset>
                      </rulesets>
                  </configuration>
                  <executions>
@@ -537,7 +538,8 @@
                 <version>3.9.0</version>
                 <configuration><failOnViolation>false</failOnViolation>
                     <rulesets>
-                        <ruleset>IdentifyIO.xml</ruleset>                              
+                        <ruleset>IdentifyIO.xml</ruleset>
+                        <ruleset>IdentifyLogs.xml</ruleset>
                     </rulesets>
                 </configuration>
                 <!--configuration>                                    
