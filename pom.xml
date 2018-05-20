@@ -456,6 +456,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
                 <version>3.9.0</version>
+                <goals>
+                    <goal>pmd</goal>
+                </goals>
                 <configuration>
                     <failOnViolation>false</failOnViolation>
                     <outputDirectory>code-analysis/reports/html</outputDirectory>
