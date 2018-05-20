@@ -332,6 +332,9 @@
                 <artifactId>maven-pmd-plugin</artifactId>
                 <configuration>
                     <failOnViolation>false</failOnViolation>
+                    <rulesets>
+                        <ruleset>IdentifyIO.xml</ruleset>  
+                     </rulesets>
                 </configuration>
                 <executions>
                 <execution>
