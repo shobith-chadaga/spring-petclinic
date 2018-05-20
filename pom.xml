@@ -452,6 +452,12 @@
                 <artifactId>maven-pmd-plugin</artifactId>
                 <configuration>
                     <failOnViolation>false</failOnViolation>
+                    <outputDirectory>code-analysis/reports/html</outputDirectory>
+                    <targetDirectory>code-analysis/reports/</targetDirectory>
+                    <aggregate>true</aggregate>
+                    <language>java</language>
+                    <skipPmdError>false</skipPmdError>
+                    <includeTests>true</includeTests>
                     <rulesets>
                         <ruleset>IdentifyIO.xml</ruleset>  
                      </rulesets>
