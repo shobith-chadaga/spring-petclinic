@@ -298,6 +298,10 @@
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
         </dependency>
+            <dependency>
+        <groupId>pmd</groupId>
+        <artifactId>pmd</artifactId>
+    </dependency>
     </dependencies>
 
     <!-- Maven plugin versions are mentioned in order to guarantee the build reproducibility in the long term -->
