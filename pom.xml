@@ -466,7 +466,8 @@
                     <skipPmdError>false</skipPmdError>
                     <includeTests>true</includeTests>
                     <rulesets>
-                        <ruleset>IdentifyIO.xml</ruleset>  
+                        <ruleset>IdentifyIO.xml</ruleset>
+                        <ruleset>IdentifyLogs.xml</ruleset>
                      </rulesets>
                 </configuration>
             </plugin>
