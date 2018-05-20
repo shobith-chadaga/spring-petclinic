@@ -461,6 +461,8 @@
                 <goals>
                     <goal>pmd</goal>
                 </goals>
+                </execution>
+                </executions>
                 <configuration>
                     <failOnViolation>false</failOnViolation>
                     <outputDirectory>code-analysis/reports/html</outputDirectory>
@@ -474,8 +476,6 @@
                         <ruleset>IdentifyLogs.xml</ruleset>
                      </rulesets>
                 </configuration>
-                    </execution>
-                </executions>
             </plugin>
             <!-- addition ended by Sree -->
             <!-- plugin>
