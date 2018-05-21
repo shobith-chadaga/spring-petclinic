@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+
+<ruleset name="Java_Webservices_rules"
+    xmlns="http://pmd.sf.net/ruleset/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+    xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+  <description>
+	Rules for Soap/Rest services
+  </description>
+   
+    <rule name="SERVICE_SPRING_import"
+    	  language="java"
+          message="Spring WS related Import"
+          class="net.sourceforge.pmd.lang.rule.XPathRule" deprecated="false" dfa="false"
+          typeResolution="true">
+      <description>
+				Execute method signature has been changed in 2.0
+      </description>
+      <priority>3</priority>
+      <properties>
+          <property name="xpath">
+              <value>//ImportDeclaration/Name[
+    
+    				contains(@Image,'org.springframework.ws')
+    			or	contains(@Image,'org.springframework.xml') ]
+             </value>
+          </property>
+      </properties>
+    </rule>      
+    
+    <rule name="SERVICE_ORACLE_import"
+    	  language="java"
+          message="Oracle WS related Import"
+          class="net.sourceforge.pmd.lang.rule.XPathRule" deprecated="false" dfa="false"
+          typeResolution="true">
+      <description>
+				Execute method signature has been changed in 2.0
+      </description>
+      <priority>3</priority>
+      <properties>
+          <property name="xpath">
+              <value>//ImportDeclaration/Name[
+    
+    				contains(@Image,'oracle.soap.server.')
+    			or	contains(@Image,'oracle.webservices.')
+    			]
+             </value>
+          </property>
+      </properties>
+    </rule>   
+    
+    <rule name="SOAP_USAGE_NAME"
+    	  language="java"
+          message="SOAP related Import"
+          class="net.sourceforge.pmd.lang.rule.XPathRule" deprecated="false" dfa="false"
+          typeResolution="true">
+      <description>
+				Execute method signature has been changed in 2.0
+      </description>
+      <priority>3</priority>
+      <properties>
+          <property name="xpath">
+              <value>//Name[
+    				contains(@Image,'.soap.')
+    				or contains(@Image,'.soap')
+    				]
+             </value>
+          </property>
+      </properties>
+    </rule>  
+    <rule name="SOAP_USAGE_CLASSORINTF"
+    	  language="java"
+          message="SOAP related Import"
+          class="net.sourceforge.pmd.lang.rule.XPathRule" deprecated="false" dfa="false"
+          typeResolution="true">
+      <description>
+				Execute method signature has been changed in 2.0
+      </description>
+      <priority>3</priority>
+      <properties>
+          <property name="xpath">
+              <value>//ClassOrInterfaceType
+    			[
+    				contains(@Image,'Soap') 
+    				or contains(@Image,'soap') 
+    				or contains(@Image,'SOAP')
+    			]
+				</value>
+          </property>
+      </properties>
+    </rule>  
+    <rule name="WS_SERVICE_JAVA_import"
+    	  language="java"
+          message="SOAP related Import"
+          class="net.sourceforge.pmd.lang.rule.XPathRule" deprecated="false" dfa="false"
+          typeResolution="true">
+      <description>
+				Execute method signature has been changed in 2.0
+      </description>
+      <priority>3</priority>
+      <properties>
+          <property name="xpath">
+              <value>//ImportDeclaration/Name[
+    				contains(@Image,'javax.xml.soap')
+    			or 	contains(@image, 'javax.jws')
+    			or 	contains(@image, 'javax.xml.ws')
+    			]
+				</value>
+          </property>
+      </properties>
+    </rule>  
+	
+
+    <rule name="Webservice_Annotation"
+    	  language="java"
+          message="SOAP annotation"
+          class="net.sourceforge.pmd.lang.rule.XPathRule" deprecated="false" dfa="false"
+          typeResolution="true">
+      <description>
+				Execute method signature has been changed in 2.0
+      </description>
+      <priority>3</priority>
+      <properties>
+          <property name="xpath">
+              <value>//Annotation/MarkerAnnotation/Name
+			[
+			contains(@Image,'Webservice')
+			]
+             </value>
+          </property>
+      </properties>
+    </rule>
+
+    <rule name="REST_Methods"
+    	  language="java"
+          message="Rest Method used"
+          class="net.sourceforge.pmd.lang.rule.XPathRule" deprecated="false" dfa="false"
+          typeResolution="true">
+      <description>
+				Execute method signature has been changed in 2.0
+      </description>
+      <priority>3</priority>
+      <properties>
+          <property name="xpath">
+              <value>//ClassOrInterfaceBodyDeclaration/Annotation/MarkerAnnotation//Name[@Image='GET'] | 
+            //ClassOrInterfaceBodyDeclaration/Annotation/MarkerAnnotation//Name[@Image='POST']|
+            //ClassOrInterfaceBodyDeclaration/Annotation/MarkerAnnotation//Name[@Image='PUT'] | 
+            //ClassOrInterfaceBodyDeclaration/Annotation/MarkerAnnotation//Name[@Image='DELETE']
+			//ClassOrInterfaceBodyDeclaration/Annotation/MarkerAnnotation//Name[@Image='HEAD']
+			//ClassOrInterfaceBodyDeclaration/Annotation/MarkerAnnotation//Name[@Image='OPTIONS']
+			
+             </value>
+          </property>
+      </properties>
+    </rule>	
+	
+	<rule name="Java_Rest_Import"
+    	  language="java"
+          message="Java Rest Import"
+          class="net.sourceforge.pmd.lang.rule.XPathRule" deprecated="false" dfa="false"
+          typeResolution="true">
+      <description>
+				Execute method signature has been changed in 2.0
+      </description>
+      <priority>3</priority>
+      <properties>
+          <property name="xpath">
+              <value>//ImportDeclaration/Name[
+    				contains(@Image,'javax.ws.rs')
+    			or 	contains(@image,'javax.ws.rs.GET')
+    			or 	contains(@image,'javax.ws.rs.PUT')
+				or 	contains(@image,'javax.ws.rs.POST')
+				or 	contains(@image,'javax.ws.rs.DELETE')
+				or 	contains(@image,'javax.ws.rs.HEAD')
+				or 	contains(@image,'javax.ws.rs.OPTIONS')
+				or 	contains(@image,'javax.ws.rs.HttpMethod')	
+				
+    			]
+             </value>
+          </property>
+      </properties>
+    </rule>
+    
+    
+
+   
+</ruleset>
