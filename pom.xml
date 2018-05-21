@@ -554,11 +554,6 @@
                         <ruleset>IdentifySoapRest.xml</ruleset>
                     </rulesets>
                 </configuration>
-                <!--configuration>                                    
-                    <outputDirectory>code-analysis/reports/html</outputDirectory>
-                    <targetDirectory>code-analysis/reports/</targetDirectory>
-                    <targetJdk>1.6</targetJdk>
-               </configuration-->
             </plugin>
             
         </plugins>
