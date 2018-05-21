@@ -456,19 +456,16 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
                 <version>3.9.0</version>
-                <executions>
-                    <execution>
                 <goals>
                     <goal>pmd</goal>
                 </goals>
-                </execution>
-                </executions>
                 <configuration>
                     <failOnViolation>false</failOnViolation>
                     <outputDirectory>code-analysis/reports/html</outputDirectory>
                     <targetDirectory>code-analysis/reports/</targetDirectory>
                     <aggregate>true</aggregate>
                     <language>java</language>
+                    <skipEmptyReport>false</skipEmptyReport>
                     <skipPmdError>false</skipPmdError>
                     <includeTests>true</includeTests>
                     <rulesets>
