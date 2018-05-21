@@ -341,6 +341,7 @@
                             <rulesets>
                                 <ruleset>IdentifyIO.xml</ruleset>
                                 <ruleset>IdentifyLogs.xml</ruleset>
+                                <ruleset>IdentifySoapRest.xml</ruleset>
                      </rulesets>
                  </configuration>
                  <executions>
